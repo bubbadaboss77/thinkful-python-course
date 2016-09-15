@@ -1,2 +1,2 @@
 # thinkful-python-course
-Course with William
+Course with William and Reed
