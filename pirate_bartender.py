@@ -1,4 +1,5 @@
 import random
+
 questions = {
     "strong": "Do ye like yer drinks strong?",
     "salty": "Do ye like it with a salty tang?",
@@ -15,31 +16,30 @@ ingredients = {
     "fruity": ["slice of orange", "dash of cassis", "cherry on top"],
 }
 
-def take_order(value):
-    value[0] = value
+def take_order():
+    
     preferences = {}
     for k,v in questions.items():
         print('Order : %s' % questions.get(k))
+        order = input(v + ' ')
+        preferences[k] = (order == 'yes')
+    print(preferences)  
+    return preferences        
         
-        
-
-if __name__ == '__main__':
-    take_order()
-    value = input(questions.keys())
+def make_drink(value):
+    drinks = []
+    for k,v in value.items():
+        if v is True:
+            drinks.append(random.choice(ingredients[k]))
+    return drinks
     
-'''    
-def side_effect_test(value):
-    # Do something to modify the value
-    value[1] = "orange"
-    print("Inside the function, the value becomes {}".format(value))
-
-if __name__ == "__main__":
-    # Create the value
-    value = ["red", "green", "blue"]
-
-    print("Outside the function, the value starts as {}".format(value))
-
-    side_effect_test(value)
-
-    print("Outside the function, the value is now {}".format(value))    
-'''    
+def main():
+    order = take_order()
+    for drink in make_drink(order):
+        print('I would recommend a drink with: ')
+        print("    " + drink)
+        
+if __name__ == '__main__':
+    main()
+    
+    
