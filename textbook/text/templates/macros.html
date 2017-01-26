@@ -1,0 +1,22 @@
+{% macro render_book(book) %}
+<div class="row">
+    <div class="col-md-2 text-right metadata">
+        {{ book.owner.name }}
+        <ul class="list-unstyled">
+            <li>
+                {{ book.datetime | dateformat("%d/%m/%y") }}
+            </li>
+        </ul>
+    </div>
+    <div class="col-md-10">
+        <h1>
+            {{ book.title }}
+        </h1>
+            <li>{{ book.author | markdown }}</li>
+            <li>{{ book.subject }}</li>
+            <li>{{ book.owner.name }}</li>
+            <li>{{ book.owner.email }}</li>
+            
+    </div>
+</div>
+{% endmacro %}

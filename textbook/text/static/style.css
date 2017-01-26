@@ -1,0 +1,88 @@
+body {
+    /* Typography Declarations */
+    color: #222222;
+    font-size: 1em;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+}
+.masthead-heading{
+    text-align: center;
+    margin-bottom: -5em;
+  }
+
+.masthead-heading {
+    margin-top: 0em;
+
+}
+
+.masthead {
+  padding: 10em 0;
+  background-image: url("http://res.cloudinary.com/doonbndth/image/upload/v1484188055/082dcxnkfxu-alex-read_zvpbuo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top: solid 1em rgb(166, 130, 255);
+}
+.masthead-intro {
+    margin-bottom: 0.1em;
+    font-family: "Gentium Book Basic", Georgia, serif;
+    font-size: 2em;
+}
+.masthead-heading {
+    margin-top: -0.2em;
+    font-family: "Open Sans", "Helvetica Neue", sans-serif;
+    font-weight: bold;
+    font-size: 6em;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+}
+.text{
+    /* Typography Declarations */
+    text-align: center;
+    font-family: "Gentium Book Basic", Georgia, serif;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: red;
+    
+}
+
+#nav {
+    width:100%;
+    height: 400px;
+    background-size: cover;
+}
+#nav_wrapper{
+    height: 100px;
+    width: 700px;
+    background: #377D7A;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    opacity: 0.7;
+    filter:alpha (opacity=70); 
+
+}
+#nav_wrapper ul li{
+    list-style: none;
+    display: inline;
+    font-weight: bold;
+    padding: 10px;
+    text-align: center
+    
+}
+#nav_wrapper a{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    
+}
+
+#nav_wrapper ul{
+    width: 90%;
+    margin: 0 auto;
+
+}
+
+#nav_wrapper ul li:hover{
+    background:red;
+    transition:all 0.45s;
+    filter:alpha (opacity=50); 
+}
